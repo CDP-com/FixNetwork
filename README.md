@@ -1,8 +1,8 @@
-App-Template
+Fix Your Network
 =======================
-Description: This is the template for most SnapBack Apps.  Use this repository and its files as the start of your new app.  
+Description: This app helps you troubleshoot problems that commonly occur with your network connections.  Sometimes IP connections get messed up and you need to drop and renew it.  Additionally, you can run "Network Diagnostics" to help diagnose network problems.
 
-Version: 1.0
+Version: 0.1
 
 Notes
 ----
