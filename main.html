@@ -1,0 +1,139 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=windows-1252" />
+<meta http-equiv="x-ua-compatible" content="ie=9">
+
+<title>Fix Network | SnapBack Apps</title>
+	
+<!--TEMPLATE STYLE SHEETS --> 
+<link rel ="stylesheet" type="text/css" href="../common/css/style.css" title="standard-style" />
+<link rel ="stylesheet" type="text/css" href="custom-style.css" title="custom-style" />
+
+<!--APP EXTERNAL JAVASCRIPT FILES -->
+	<script type="text/javascript" src="sample-lib.js"></script>
+<!--Add Any of Your Javascript Files Here -->  
+    
+<!-- SCRIPTS FOR TABS --> 
+<script type="text/javascript" src="../common/js/jquery.min.js"></script>
+<script type="text/javascript" src="../common/js/tabs.js"></script> 
+ <script language="jscript">
+   var shell = new  ActiveXObject("WScript.Shell")
+   
+   function FixIP(){
+	try {
+	    shell.Run ("ipconfig -release", 3, true);  
+        shell.Run ("ipconfig -renew", 0, true); 
+		alert("Reset is Successful.");
+
+	} catch(e) {
+            alert ("Reset of IP Failed");
+	}
+   }
+   function RunNDG(){
+   shell.Run("C:\\WINDOWS\\System32\\msdt.exe -skip TRUE -path C:\\WINDOWS\\diagnostics\\system\\networking -ep NetworkDiagnosticsPNI")
+}
+
+   </script>
+</head>
+
+<body>
+<div id="page">
+	<ul class="tabs">
+		<li><a href="#tab1">Overview</a></li>
+		<li><a href="#tab2">Technical Details</a></li>
+		<li><a href="#tab3">FAQ</a></li>
+		<li><a href="#tab4">Terms of Use</a></li>
+		<li><a href="#tab5">Contribute</a></li>
+	</ul>
+				
+	<div id="tab1">
+		<div id="run">
+		<br></br><br></br>
+         <input language="vbscript" button class="btn" onclick="call FixIP" type="button" value="Fix Network" name="btn_FxIP"><br></br><br>
+         <input language="vbscript" button class="btn2" onclick="call RunNDG" type="button" value="Network Diagnostics" name="btn_NDG">
+		</div>
+					
+		<div id="description">
+			<p>To fix your network simply click on the Fix Network Button.
+			You will see a command window flash. This is followed by a message
+			to tell you if the reset was successful or failed. The message takes a few seconds
+			to appear after the command window flash.</p>
+
+			<p>Sometimes IP connections get messed up and you need to drop and renew it.  This is
+			my first app so I would really appreciate some help on improving it.</p>
+			
+			<p>Run Network Diagnostics to help diagnose network problems</p>
+
+		</div>
+				
+	</div>
+				
+	<div id="tab2">
+		<p>IPConfig is a command line tool that comes with your computer.  This is the tool we use to fix the your network when your IP address is
+		having problems.</p>
+		<p>Programmers - Please help find a way to not have command window flash - Actually I think this could be much nicer with a working...
+		graphic.  There are other Network tools that could be here as well.  </p>
+
+	</div>
+				
+	<div id="tab3">
+
+		<p>This area is dedicated to having a set of frequently asked questions that a common user may ask.</p>
+
+		<p>
+			<strong>Q:</strong> Question 1<br />
+			<strong>A:</strong> Answer 1
+		</p>
+					
+		<p>
+			<strong>Q:</strong> Question 2<br />
+			<strong>A:</strong> Answer 2
+		</p>
+					
+		<p>
+			<strong>Q:</strong> Question 3<br />
+			<strong>A:</strong> Answer 3
+		</p>
+	</div>
+				
+	<div id="tab4">
+		<strong>Terms</strong>
+				
+		<p>This area is for various terms and conditions.  A standard set of terms come with each app.
+	</div>
+	
+	<div id="tab5">
+		<strong>Thanks for Contributing</strong>
+		
+		<p>This app was created with developers working in collaboration with users like you.  We want your input and valuable contributions towards this app!  We’d like to hear ANYTHING, good or bad, that you have to say.  Feeback can include any improvements you wish to see in this app, suggested layout/content changes, and development enchancements.  We will publish editable excerpts from your input. </p>
+					
+		<strong>Let us help guide you.  How do you want to contribute?</strong>			
+			<table class="contribute-table">
+				<tr>
+					<td><strong><a id="idbug" href="" title="Report a Bug or Issue Regarding this App">Report a Bug/Issue [insert link]</a></strong><br />Something not working right?  Notice any irregular behavior?  Report a bug or issue with as much detail as you want to include and help us improve the app.</td>
+					
+					<td><strong><a id="idnewfeature" href="" title="Request a New Feature for this App">Request a New Feature [insert link]</a></strong><br />Do you have a feature you would like see added to this app?  Report your idea to our team of developers and help see its inclusion in the next version.</td>
+				</tr>
+				<tr>
+					<td><strong><a id="idadmin" href="" title="Work on or Learn How to Work on Development of this App">Work on App Development [insert link]</a></strong><br />Do you know a way to improve the app's performance?  Learn how to help this app's team of developers enhance their product with better coding, updated syntax, and more!</td>
+					
+					<td><strong><a id="iduicontent" href="" title="Make Changes to the App's UI and Content">Improve the App's UI and Content [insert link]</a></strong><br />Think an image should be positioned in another way?  Think a paragraph needs to change?  Help the team create a UI and content the makes sense to users like you.</td>
+				</tr>
+				<tr>
+					<td colspan="2"><strong><a id="idapp" href="" title="Visit the App Page for this App">I'm not quite sure... [insert link]</a></strong><br />Don't know how to contribute?  No problem!  Visit the app's User/Dev page and learn about ALL of the ways your input and work can help make this a better app.</td>
+				</tr>
+			</table>
+					
+		<strong>About the SnapBack Apps Co-op</strong>	
+		
+		<p>SnapBack Apps is designed to allow regular users to work with developers in the hope of building and bettering the applications we use daily.  The SnapBack Apps Co-op is the platform where contributors communicate, design, and ultimately work together to accomplish this mission.</p>
+	</div>
+				
+	<div style="clear: both;"></div>
+									
+</div><!--End Page-->
+
+</body>
+</html> 
+
